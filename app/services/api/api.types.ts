@@ -21,6 +21,15 @@ export interface EpisodeItem {
   categories: string[]
 }
 
+export interface Coordinates {
+  latitude: number
+  longitude: number
+  latitudeDelta: number
+  longitudeDelta: number
+}
+
+
+
 export interface ApiFeedResponse {
   status: string
   feed: {
@@ -42,6 +51,11 @@ export interface ApiConfig {
    * The URL of the api.
    */
   url: string
+
+  /**
+   * The key to use for the API.
+   */
+  apiKey: string
 
   /**
    * Milliseconds before we timeout the request.

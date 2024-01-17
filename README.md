@@ -1,164 +1,49 @@
-# Welcome to your new ignited app!
+# FlightTrackingApp
 
-[![CircleCI](https://circleci.com/gh/infinitered/ignite.svg?style=svg)](https://circleci.com/gh/infinitered/ignite)
+FlightTrackingApp is a user-friendly mobile application designed to provide real-time flight tracking and essential travel information. Whether you're a frequent traveler or just curious about the flights in the sky, this app is your go-to companion. Stay informed about departures, arrivals, delays, and more with a sleek and intuitive user interface.
 
-## The latest and greatest boilerplate for Infinite Red opinions
+## Features
 
-This is the boilerplate that [Infinite Red](https://infinite.red) uses as a way to test bleeding-edge changes to our React Native stack.
+- **Real-time Flight Tracking:** Track flights worldwide in real-time, including live updates on departure and arrival times.
 
-Currently includes:
+- **Flight Details:** Access detailed information about each flight, including aircraft type, altitude, speed, and more.
 
-- React Native
-- React Navigation
-- MobX State Tree
-- TypeScript
-- And more!
+- **Search and Filter:** Easily search for specific flights, airlines, or airports. Use filters to customize your view and focus on what matters to you.
 
-## Quick Start
+- **Interactive Map:** Visualize flights on an interactive map with smooth navigation and zoom features.
 
-The Ignite boilerplate project's structure will look similar to this:
+## Screenshots
 
-```
-ignite-project
-├── app
-│   ├── components
-│   ├── config
-│   ├── i18n
-│   ├── models
-│   ├── navigators
-│   ├── screens
-│   ├── services
-│   ├── theme
-│   ├── utils
-│   └── app.tsx
-├── assets
-│   ├── icons
-│   └── images
-├── test
-│   ├── __snapshots__
-│   ├── mockFile.ts
-│   └── setup.ts
-├── README.md
-├── android
-│   ├── app
-│   ├── build.gradle
-│   ├── gradle
-│   ├── gradle.properties
-│   ├── gradlew
-│   ├── gradlew.bat
-│   ├── keystores
-│   └── settings.gradle
-├── ignite
-│   └── templates
-|       |── app-icon
-│       ├── component
-│       ├── model
-│       ├── navigator
-│       └── screen
-├── index.js
-├── ios
-│   ├── IgniteProject
-│   ├── IgniteProject-tvOS
-│   ├── IgniteProject-tvOSTests
-│   ├── IgniteProject.xcodeproj
-│   └── IgniteProjectTests
-├── .env
-└── package.json
+![Home Screen](assets/images//readme/home.png)
+*The clean and intuitive home screen provides an overview of your tracked flights.*
 
-```
+![Flight Details](assets/images/readme/search.png)
+*Detailed flight information, including current altitude, speed, and route.*
 
-### ./app directory
+## Installation
 
-Included in an Ignite boilerplate project is the `app` directory. This is a directory you would normally have to create when using vanilla React Native.
+FlightTrackingApp is available for both iOS and Android devices. Simply download it from the App Store or Google Play Store to get started.
 
-The inside of the `app` directory looks similar to the following:
+### iOS
 
-```
-app
-├── components
-├── config
-├── i18n
-├── models
-├── navigators
-├── screens
-├── services
-├── theme
-├── utils
-└── app.tsx
-```
+1. Open the App Store on your iOS device.
+2. Search for "FlightTrackingApp."
+3. Tap "Install" to download and install the app.
 
-**components**
-This is where your reusable components live which help you build your screens.
+### Android
 
-**i18n**
-This is where your translations will live if you are using `react-native-i18n`.
+1. Open the Google Play Store on your Android device.
+2. Search for "FlightTrackingApp."
+3. Tap "Install" to download and install the app.
 
-**models**
-This is where your app's models will live. Each model has a directory which will contain the `mobx-state-tree` model file, test file, and any other supporting files like actions, types, etc.
+## Getting Started
 
-**navigators**
-This is where your `react-navigation` navigators will live.
+1. Open FlightTrackingApp on your mobile device.
+2. Explore the home screen to view tracked flights or use the search feature to find specific flights, airlines, or airports.
+3. Customize your settings, add favorite flights, and enjoy staying informed about the world of aviation.
 
-**screens**
-This is where your screen components will live. A screen is a React component which will take up the entire screen and be part of the navigation hierarchy. Each screen will have a directory containing the `.tsx` file, along with any assets or other helper files.
+## Feedback and Support
 
-**services**
-Any services that interface with the outside world will live here (think REST APIs, Push Notifications, etc.).
+We value your feedback! If you encounter any issues or have suggestions for improvement, please contact our support team at [frankroberto2000@gmail.com](mailto:frankroberto2000@gmail.com).
 
-**theme**
-Here lives the theme for your application, including spacing, colors, and typography.
-
-**utils**
-This is a great place to put miscellaneous helpers and utilities. Things like date helpers, formatters, etc. are often found here. However, it should only be used for things that are truly shared across your application. If a helper or utility is only used by a specific component or model, consider co-locating your helper with that component or model.
-
-**app.tsx** This is the entry point to your app. This is where you will find the main App component which renders the rest of the application.
-
-### ./assets directory
-
-This directory is designed to organize and store various assets, making it easy for you to manage and use them in your application. The assets are further categorized into subdirectories, including `icons` and `images`:
-
-```
-assets
-├── icons
-└── images
-```
-
-**icons**
-This is where your icon assets will live. These icons can be used for buttons, navigation elements, or any other UI components. The recommended format for icons is PNG, but other formats can be used as well.
-
-Ignite comes with a built-in `Icon` component. You can find detailed usage instructions in the [docs](https://github.com/infinitered/ignite/blob/master/docs/Components-Icon.md).
-
-**images**
-This is where your images will live, such as background images, logos, or any other graphics. You can use various formats such as PNG, JPEG, or GIF for your images.
-
-Another valuable built-in component within Ignite is the `AutoImage` component. You can find detailed usage instructions in the [docs](https://github.com/infinitered/ignite/blob/master/docs/Components-AutoImage.md).
-
-How to use your `icon` or `image` assets:
-
-```
-import { Image } from 'react-native';
-
-const MyComponent = () => {
-  return (
-    <Image source={require('../assets/images/my_image.png')} />
-  );
-};
-```
-
-### ./ignite directory
-
-The `ignite` directory stores all things Ignite, including CLI and boilerplate items. Here you will find templates you can customize to help you get started with React Native.
-
-### ./test directory
-
-This directory will hold your Jest configs and mocks.
-
-## Running Maestro end-to-end tests
-
-Follow our [Maestro Setup](https://ignitecookbook.com/docs/recipes/MaestroSetup) recipe from the [Ignite Cookbook](https://ignitecookbook.com/)!
-
-## Previous Boilerplates
-
-- [2018 aka Bowser](https://github.com/infinitered/ignite-bowser)
-- [2017 aka Andross](https://github.com/infinitered/ignite-andross)
-- [2016 aka Ignite 1.0](https://github.com/infinitered/ignite-ir-boilerplate-2016)
+Happy tracking! ✈️
